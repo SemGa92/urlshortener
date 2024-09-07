@@ -13,3 +13,27 @@ Command parameters:
 
 If a complete URL has already been shortened and is not expired, the tool should return the same shortened URL.\
 If a shortened URL doesn’t exist or is expired, it should return an appropriate message.
+
+## How to use it
+### Prerequisites
+On your local machine, you must have correctly set up [Docker](https://www.docker.com/) and [Docker compose](https://docs.docker.com/reference/cli/docker/compose/).
+
+### Install
+```bash
+docker compose up -d
+```
+
+```bash
+docker compose build urlshortener_cli
+```
+
+### Examples
+```bash
+#minify
+docker run --env-file .env --rm -ti urlshortener --minify=https://www.example.com/path?q=search
+```
+
+```bash
+#expand
+docker run --env-file .env --rm -ti urlshortener --expand=https://myurlshortener.com/fstp4
+```
