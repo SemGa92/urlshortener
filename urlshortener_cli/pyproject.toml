@@ -2,6 +2,5 @@
 name = "urlshortener_cli"
 version = "0.1"
 dependencies = [
-    "pydantic==2.9.0",
-    "pydantic-argparse==0.9.0"
+    "pymongo==4.8.0"
 ]

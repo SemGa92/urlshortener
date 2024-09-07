@@ -1,10 +1,12 @@
 import logging
 import sys
+
 from argparse import (
-    ArgumentTypeError,
     ArgumentParser,
+    ArgumentTypeError,
     Namespace,
     )
+
 
 
 def _build_args() -> Namespace:
