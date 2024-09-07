@@ -15,7 +15,7 @@ If a complete URL has already been shortened and is not expired, the tool should
 If a shortened URL doesn’t exist or is expired, it should return an appropriate message.
 
 ## How to use it
-Running on Ubuntu 22.04
+Run on **Ubuntu 22.04**
 
 ### Prerequisites
 On your local machine, you must have correctly set up [Docker](https://www.docker.com/) and [Docker compose](https://docs.docker.com/reference/cli/docker/compose/).
@@ -38,6 +38,18 @@ docker run --env-file .env --rm -ti urlshortener --minify=https://www.example.co
 ```bash
 #expand
 docker run --env-file .env --rm -ti urlshortener --expand=https://myurlshortener.com/fstp4
+```
+
+## Test coverage
+```bash
+Name                                          Stmts   Miss  Cover
+-----------------------------------------------------------------
+urlshortener_cli/src/utils/argsparser.py         19     10    47%
+urlshortener_cli/src/utils/functions.py          13      0   100%
+urlshortener_cli/tests/__init__.py                0      0   100%
+urlshortener_cli/tests/test_urlshortener.py      28      0   100%
+-----------------------------------------------------------------
+TOTAL                                            60     10    83%
 ```
 
 ## References
