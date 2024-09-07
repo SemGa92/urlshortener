@@ -9,7 +9,7 @@ from argparse import (
 
 
 
-def _build_args() -> Namespace:
+def build_args() -> Namespace:
     parser = ArgumentParser(
         prog='URLShortener',
         description='Performs URL shortening and expansion'
@@ -30,7 +30,7 @@ def _build_args() -> Namespace:
 
 def get_args() -> Namespace:
     try:
-        args = _build_args()
+        args = build_args()
         if args.minify and args.expand:
             raise ArgumentTypeError(
                 "You can use one parameter at a time."
